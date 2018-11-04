@@ -16,22 +16,7 @@ interface StateType {
 
 const state: StateType = {
   totalPayout: 0,
-  loans: [
-    {
-      balance: 1100,
-      interest: 1,
-      earlyPaymentFee: 10,
-      payout: 1111,
-      topUp: false,
-    },
-    {
-      balance: 11200,
-      interest: 2,
-      earlyPaymentFee: 10,
-      payout: 11212,
-      topUp: false,
-    },
-  ],
+  loans: [],
 };
 
 const mutations = {
