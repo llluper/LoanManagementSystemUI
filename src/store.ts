@@ -3,7 +3,14 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-const state = {};
+interface StateType {
+  totalPayout: number;
+}
+
+const state: StateType = {
+  totalPayout: 0,
+};
+
 const mutations = {};
 const actions = {};
 const getters = {};
