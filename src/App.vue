@@ -5,17 +5,24 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
+import { mapActions } from 'vuex';
+
 export default Vue.extend({
   data() {
     return {
       link: 'http://localhost:5000/api/loan'
     }
   },
+  methods: {
+    ...mapActions([
+      'saveLoans',
+    ]),
+  },
   created() {
     this.$http.get(this.link).then((response) => {
-      console.log(response.data);
+      this.saveLoans(response.data);
     }, (error) => {
-        console.log(error.statusText);
+      console.log(error.statusText);
     });
   },
 });
