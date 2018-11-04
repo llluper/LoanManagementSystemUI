@@ -13,7 +13,7 @@
             Carryover / Payout Amount
           </div>
           <div class="column text-bold text-right text-medium">
-            ${{ $store.state.totalPayout }}
+            ${{ numberWithCommas($store.state.totalPayout) }}
           </div>
         </div>
       </div>
@@ -38,12 +38,16 @@
 <script lang="ts">
 import Vue from 'vue';
 import { mapGetters } from 'vuex';
+import { numberWithCommas } from '../common/statics';
 
 export default Vue.extend({
   name: 'hometop',
   computed: mapGetters([
     'loanCountThreeOrMore',
   ]),
+  methods: {
+    numberWithCommas,
+  },
 });
 </script>
 

@@ -13,7 +13,7 @@
         {{ balance }} 
       </div>
       <div class="column four-twelfths">
-        <input type="checkbox" :value="loan.topUp" /> Top Up  
+        <input type="checkbox" :value="loan.topUp" @click="topUp(index)" /> Top Up  
       </div>
     </div>
     <div class="row">
@@ -48,6 +48,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { mapActions } from 'vuex';
 import { numberWithCommas } from '../common/statics';
 
 export default Vue.extend({
@@ -60,6 +61,11 @@ export default Vue.extend({
       fee: '$' + numberWithCommas(this.loan.fee),
       payout: '$' + numberWithCommas(this.loan.payout),
     };
+  },
+  methods: {
+    ...mapActions([
+      'topUp',
+    ]),
   },
 });
 </script>

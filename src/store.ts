@@ -41,8 +41,17 @@ const state: StateType = {
   ],
 };
 
-const mutations = {};
-const actions = {};
+const mutations = {
+  topUp(state: StateType, index: any) {
+    state.loans[index].topUp = !state.loans[index].topUp;
+    state.totalPayout += state.loans[index].topUp ? state.loans[index].payout : -state.loans[index].payout;
+  },
+};
+
+const actions = {
+  topUp: (context: any, payload: any) => context.commit('topUp', payload),
+};
+
 const getters = {
   loanCount: (state: StateType) => state.loans.length,
   loanCountThreeOrMore: (state: StateType) => state.loans.length >= 3,
