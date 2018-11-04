@@ -17,4 +17,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.loans > div {
+  padding-bottom: 30px;
+}
 </style>

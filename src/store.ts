@@ -31,13 +31,6 @@ const state: StateType = {
       payout: 11212,
       topUp: false,
     },
-    {
-      balance: 222300,
-      interest: 3,
-      earlyPaymentFee: 10,
-      payout: 222313,
-      topUp: false,
-    },
   ],
 };
 
