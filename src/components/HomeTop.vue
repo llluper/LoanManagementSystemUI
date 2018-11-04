@@ -1,5 +1,5 @@
 <template>
-  <div class="loans">
+  <div class="hometop">
     <div class="row title-div">
       <h3>Personal Loan Top Up or Apply</h3>
     </div>
@@ -39,7 +39,7 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'loans',
+  name: 'hometop',
 });
 </script>
 
