@@ -1,4 +1,6 @@
-# loanmanagementsystemui
+# LoanManagementSystemUI
+
+The user interface for the Loan Management System project, to be used with LoanManagementSystemWebApi.
 
 ## Project setup
 ```
