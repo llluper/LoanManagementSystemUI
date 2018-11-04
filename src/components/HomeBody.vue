@@ -5,18 +5,20 @@
         <Loans />
       </div>
       <div class="column four-twelfths">
+        <NoLoanAlert />
       </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import Loans from './Loans.vue';
 import { mapGetters } from 'vuex';
-  
+import Loans from './Loans.vue';
+import NoLoanAlert from '../components/NoLoanAlert.vue';
+
 export default Vue.extend({
   name: 'homebody',
-  components: { Loans },
+  components: { Loans, NoLoanAlert },
   computed: mapGetters([
     'loanCount',
   ]),
