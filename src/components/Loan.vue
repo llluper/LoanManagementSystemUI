@@ -2,7 +2,7 @@
   <div class="loan">
     <div class="row header">
       <div class="column five-twelths">
-        Placeat
+        {{ index + 1 }}. {{ index % 2 ? '' : 'Placeat' }} {{ index % 2 ? 'Autern' : ''}} quas {{ index > 1 ? 'volup' : '' }} #4155{{ index + 3 }}
       </div>
     </div>
     <div class="row interest">
@@ -48,22 +48,38 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { numberWithCommas } from '../common/statics';
 
 export default Vue.extend({
   name: 'loan',
   props: ['loan', 'index'],
   data() {
     return {
-      balance: '$' + (this.loan.balance),
-      interest: '$' + (this.loan.interest),
-      fee: '$' + (this.loan.fee),
-      payout: '$' + (this.loan.payout),
+      balance: '$' + numberWithCommas(this.loan.balance),
+      interest: '$' + numberWithCommas(this.loan.interest),
+      fee: '$' + numberWithCommas(this.loan.fee),
+      payout: '$' + numberWithCommas(this.loan.payout),
     };
   },
 });
 </script>
 
 <style lang="scss" scoped>
-
+.row {
+  background-color: #fff;
+  &.header {
+    background-color: #eee;
+    border-bottom: 1px solid #000;
+  }
+  &.interest {
+    border-bottom: 1px solid #000;
+  }
+}
+.loan {
+  overflow: auto;
+  margin-top: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
 </style>
 
