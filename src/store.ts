@@ -14,12 +14,12 @@ interface StateType {
   }[];
 }
 
-const state: StateType = {
+export const state: StateType = {
   totalPayout: 0,
   loans: [],
 };
 
-const mutations = {
+export const mutations = {
   topUp(state: StateType, index: any) {
     state.loans[index].topUp = !state.loans[index].topUp;
     state.totalPayout += state.loans[index].topUp ? state.loans[index].payout : -state.loans[index].payout;
@@ -29,12 +29,12 @@ const mutations = {
   },
 };
 
-const actions = {
+export const actions = {
   topUp: (context: any, payload: any) => context.commit('topUp', payload),
   saveLoans: (context: any, payload: any) => context.commit('saveLoans', payload),
 };
 
-const getters = {
+export const getters = {
   loanCount: (state: StateType) => state.loans.length,
   loanCountThreeOrMore: (state: StateType) => state.loans.length >= 3,
 };
