@@ -16,6 +16,7 @@
     "object-literal-sort-keys": false,
     "no-consecutive-blank-lines": false,
     "array-type": [ true, "array" ],
-    "no-shadowed-variable": false
+    "no-shadowed-variable": false,
+    "no-console": false
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="NoLoanAlert">
     <div v-if="loanCountThreeOrMore" class="noLoanAlert">
-      With 3 or more current Personal Loans, a new loan application is not possible in this flow
+    <p>With 3 or more current Personal Loans, a new loan application is not possible in this flow</p>
     </div>
   </div>
 </template>
@@ -24,5 +24,8 @@ export default Vue.extend({
   border-left: 4px solid #746f6a;
   border-radius: 3px;
   padding: 1rem 3rem;
+}
+p {
+  margin: 0
 }
 </style>
