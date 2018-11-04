@@ -1,7 +1,7 @@
 <template>
   <div class="homebody row">
       <div class="column eight-twelfths">
-        <div class="loan-count text-medium">You have 0 Personal loans</div>          
+        <div class="loan-count text-medium">You have {{ loanCount }} Personal loans</div>          
         <Loans />
       </div>
       <div class="column four-twelfths">
@@ -12,10 +12,14 @@
 <script lang="ts">
 import Vue from 'vue';
 import Loans from './Loans.vue';
-
+import { mapGetters } from 'vuex';
+  
 export default Vue.extend({
   name: 'homebody',
   components: { Loans },
+  computed: mapGetters([
+    'loanCount',
+  ]),
 });
 </script>
 

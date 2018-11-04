@@ -15,6 +15,7 @@
     "ordered-imports": false,
     "object-literal-sort-keys": false,
     "no-consecutive-blank-lines": false,
-    "array-type": [ true, "array" ]
+    "array-type": [ true, "array" ],
+    "no-shadowed-variable": false
   }
 }

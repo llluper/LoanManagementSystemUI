@@ -40,10 +40,22 @@ body {
   flex-grow: 1;
   flex-shrink: 1;
   padding: .75rem;
+  &.three-twelfths {
+    @media only screen and (min-width: 769px) {
+      flex: none;
+      width: 25%;
+    }
+  }
   &.four-twelfths {
     @media only screen and (min-width: 769px) {
       flex: none;
       width: 33.33333%;
+    }
+  }
+  &.five-twelfths {
+    @media only screen and (min-width: 769px) {
+      flex: none;
+      width: 41.66667%;
     }
   }
   &.eight-twelfths {

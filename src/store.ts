@@ -43,7 +43,10 @@ const state: StateType = {
 
 const mutations = {};
 const actions = {};
-const getters = {};
+const getters = {
+  loanCount: (state: StateType) => state.loans.length,
+  loanCountThreeOrMore: (state: StateType) => state.loans.length >= 3,
+};
 
 export default new Vuex.Store({
   state,
