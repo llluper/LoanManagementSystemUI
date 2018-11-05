@@ -1,7 +1,7 @@
 <template>
   <div class="NoLoanAlert">
     <div v-if="loanCountThreeOrMore" class="noLoanAlert">
-    <p>With 3 or more current Personal Loans, a new loan application is not possible in this flow</p>
+    <p>{{ NoLoanAlertText }}</p>
     </div>
   </div>
 </template>
@@ -9,9 +9,15 @@
 <script lang="ts">
 import Vue from 'vue';
 import { mapGetters } from 'vuex';
+import { NoLoanAlertText } from '../common/statics';
 
 export default Vue.extend({
   name: 'NoLoanAlert',
+  data() {
+    return {
+      NoLoanAlertText,
+    };
+  },
   computed: mapGetters([
     'loanCountThreeOrMore',
   ]),
@@ -26,6 +32,6 @@ export default Vue.extend({
   padding: 1rem 3rem;
 }
 p {
-  margin: 0
+  padding: 0
 }
 </style>

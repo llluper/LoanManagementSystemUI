@@ -2,11 +2,12 @@ import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Vuex from 'vuex';
 import NoLoanAlert from '@/components/NoLoanAlert.vue';
 import { state, getters } from '@/store';
+import { NoLoanAlertText } from '@/common/statics';
+
 const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe('NoLoanAlert.vue', () => {
-  const NoLoanAlertText = 'With 3 or more current Personal Loans, a new loan application is not possible in this flow';
   it('does not render if the length of the array of loans is less than 3', () => {
     const store = new Vuex.Store({
       state,
