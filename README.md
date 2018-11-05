@@ -1,6 +1,6 @@
 # LoanManagementSystemUI
 
-The user interface to be used with the LoanManagementSystemWebApi repository.
+The user interface to be used with the [LoanManagementSystemWebApi](https://github.com/llluper/LoanManagementSystemWebApi) repository.
 ## Project setup
 ```
 yarn install
