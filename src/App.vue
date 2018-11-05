@@ -115,7 +115,7 @@ body {
   }
 }
 .text-medium {
-  font-size: 105%;
+  font-size: 110%;
 }
 p {
   padding: 1em;

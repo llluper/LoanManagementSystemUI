@@ -37,6 +37,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .homebody {
+  padding-bottom: 30px;
   @media only screen and (min-width: 769px) {
     padding-top: 30px;
   }
