@@ -4,14 +4,14 @@
   </div>
 </template>
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 import { mapActions } from 'vuex';
 
 export default Vue.extend({
   data() {
     return {
-      link: 'http://localhost:5000/api/loan'
-    }
+      link: 'http://localhost:5000/api/loan',
+    };
   },
   methods: {
     ...mapActions([
@@ -33,7 +33,7 @@ $color-background: #f7f7f7;
 
 html {
   background-color: $color-background;
-  font-size: 14px;
+  font-size: 12px;
   min-width: 300px;
   min-height: 100vh;
   overflow-x: hidden;
@@ -53,7 +53,20 @@ body {
   text-align: left;
   color: #000;
 }
+.container {  
+  margin: 0 auto;
+  position: relative;
+  @media screen and (min-width: 1088px) {
+      max-width: 1020px;
+      width: 1088px;
+  }
+  @media screen and (min-width: 1280px) {
+      max-width: 1180px;
+      width: 1180px;
+  }
+}
 .row {
+  width: 100%;
   @media screen and (min-width: 769px) {
     display: flex;
   }
@@ -63,26 +76,25 @@ body {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: .75rem;
-  &.three-twelfths {
+  &.is-3-of-12 {
     @media only screen and (min-width: 769px) {
       flex: none;
       width: 25%;
     }
   }
-  &.four-twelfths {
+  &.is-4-of-12 {
     @media only screen and (min-width: 769px) {
       flex: none;
       width: 33.33333%;
     }
   }
-  &.five-twelfths {
+  &.is-5-of-12 {
     @media only screen and (min-width: 769px) {
       flex: none;
       width: 41.66667%;
     }
   }
-  &.eight-twelfths {
+  &.is-8-of-12 {
     @media only screen and (min-width: 769px) {
       flex: none;
       width: 66.66667%;
@@ -92,10 +104,21 @@ body {
 .text-bold {
   font-weight: bold;
 }
-.text-right {
-  text-align: right
+.text-right-desktop {
+  @media only screen and (min-width: 769px) {
+    text-align: right
+  }
+}
+.text-center-mobile {
+  @media only screen and (max-width: 768px) {
+    text-align: center
+  }
 }
 .text-medium {
-  font-size: 110%;
+  font-size: 105%;
+}
+p {
+  padding: 1em;
+  margin: 0;
 }
 </style>

@@ -1,12 +1,22 @@
 <template>
-  <div class="homebody row">
-      <div class="column eight-twelfths">
-        <div class="loan-count text-medium">You have {{ loanCount }} Personal loans</div>          
+  <div class="homebody">
+    <div class="row">
+      <div class="column is-8-of-12">
+        <div class="loan-count">          
+          <p class="text-medium">You have {{ loanCount }} Personal loans</p>
+        </div>          
+      </div>
+      <div class="column is-4-of-12">
+        <div class="noloanalert-div">
+          <NoLoanAlert />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column is-8-of-12">
         <Loans />
       </div>
-      <div class="column four-twelfths">
-        <NoLoanAlert />
-      </div>
+    </div>
   </div>
 </template>
 
@@ -27,10 +37,15 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .homebody {
-  padding-top: 30px;
+  @media only screen and (min-width: 769px) {
+    padding-top: 30px;
+  }
 }
 .loan-count {
-  padding: 10px 0 50px;
+  padding: 10px 0 0;
+}
+.noloanalert-div {
+  padding: 1em;
 }
 </style>
 
